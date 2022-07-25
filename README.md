@@ -1,7 +1,7 @@
 
 # Project Name
 
-> <p style="color: yellowgreen;"><strong>Raspbian community conference is the platform where electronic hobbyist and embedded developer people from all around the world comes to share the knowledge, also the raspbian foundation members announces the new updates, news upon Raspberry Pi boards. As Raspberry Pi are the mini computers which almost do any work at very cheap price as compared to the system/laptop that we have. In upcoming years we will see a great change in the world because now we are in the initial state of era of Internet of Things.</strong></p>
+> <p style="color: yellowgreen"><strong>Raspbian community conference is the platform where electronic hobbyist and embedded developer people from all around the world comes to share the knowledge, also the raspbian foundation members announces the new updates, news upon Raspberry Pi boards. As Raspberry Pi are the mini computers which almost do any work at very cheap price as compared to the system/laptop that we have. In upcoming years we will see a great change in the world because now we are in the initial state of era of Internet of Things.</strong></p>
 
 
 ## Built With
@@ -95,7 +95,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 For Design Inspiration I would like to Acknowledge
-<a href="https://www.behance.net/adagio07" rel="noopener" target="_blank"><strong style="color: tomato;">Cindy Shin</strong></a> ❤️
+<a href="https://www.behance.net/adagio07" rel="noopener" target="_blank"><strong style="color: tomato">Cindy Shin</strong></a> ❤️
 
 ## 📝 License
 
