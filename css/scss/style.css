@@ -1,7 +1,10 @@
 /* CSS RESETTER */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* END OF CSS RESETTER *//*# sourceMappingURL=style.css.map */
+
+/* END OF CSS RESETTER */
