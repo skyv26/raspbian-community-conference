@@ -10,24 +10,29 @@
 
   &.active > .mobile-header--hamburgur_icon.active {
     gap: 0;
+
     & .bar-1 {
       transform: rotate(-45deg) translate(-0.2rem, 0.1rem);
       transition: all 0.25s ease-in;
     }
+
     & .bar-3 {
       transform: rotate(45deg) translate(-0.1rem, 0);
       transition: all 0.25s ease-in;
     }
+
     & .bar-2 {
       height: 0;
       transition: all 0.25s ease-in;
     }
-    transform: translate(0,-0.15rem);
+
+    transform: translate(0, -0.15rem);
     transition: all 0.25s ease-in;
   }
 
   @include media(tablet) {
-    & > .mobile-header--hamburgur_icon.active,.mobile-header--hamburgur_icon {
+    & > .mobile-header--hamburgur_icon.active,
+    .mobile-header--hamburgur_icon {
       width: 0;
       transition: all 0.25s ease-out;
     }

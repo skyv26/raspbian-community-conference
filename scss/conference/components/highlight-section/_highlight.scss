@@ -8,6 +8,7 @@
 
 .program-highlight {
   @extend %display-flex;
+
   background-color: rgba(39, 42, 50);
   background-image: url('../../../../assets/pattern_bg.png');
   background-size: 12%;
@@ -32,13 +33,13 @@
       width: 2.5rem;
       height: 1px;
       background-color: color.$tomato;
-      transform: translate(-50%, 0)
+      transform: translate(-50%, 0);
     }
-
   }
 
   &_group {
     @extend %display-flex;
+
     list-style: none;
     gap: 0.6rem;
 
