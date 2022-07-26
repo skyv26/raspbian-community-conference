@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "style.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/globals/globals.scss","../scss/conference/components/header/_header.scss","../scss/animated-hamburger/_hamburger.scss","../scss/utils/colors/_colors.scss","../scss/breakpoints/_mixins.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;ACHF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EAaA;EACA;;AAbA;EACE;EACA;;AAEF;EACE;EACA;;AAEF;EACE;EACA;;;AChBN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA,kBCfS;EDgBT;;;AEZA;EFiBF;IACE","file":"style.css"}

@@ -1,1 +1,53 @@
-/* Stylesheet */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.348);
+  padding: 1.25rem 1.45rem;
+  display: flex;
+  flex-direction: row;
+}
+.header.active > .mobile-header--hamburgur_icon.active {
+  gap: 0;
+  transform: translate(0, -0.25rem);
+  transition: all 0.25s ease-in;
+}
+.header.active > .mobile-header--hamburgur_icon.active .bar-1 {
+  transform: rotate(-45deg) translate(-0.25rem, 0.2rem);
+  transition: all 0.25s ease-in;
+}
+.header.active > .mobile-header--hamburgur_icon.active .bar-3 {
+  transform: rotate(45deg) translate(-0.05rem, -0.075rem);
+  transition: all 0.25s ease-in;
+}
+.header.active > .mobile-header--hamburgur_icon.active .bar-2 {
+  height: 0;
+  transition: all 0.25s ease-in;
+}
+
+.mobile-header--hamburgur_icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: all 0.25s ease-in-out;
+}
+.mobile-header--hamburgur_icon .bar {
+  height: 0.4rem;
+  background-color: #272a31;
+  transition: all 0.25s ease-in-out;
+}
+
+@media (min-width: 20em) {
+  body {
+    background-color: red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
