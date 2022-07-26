@@ -1,43 +1,43 @@
 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect y="17.7777" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect y="35.5557" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect y="53.3334" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect y="71.1111" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="8.88893" y="8.88892" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="8.88893" y="26.6666" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="8.88893" y="44.4443" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="8.88893" y="62.2223" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="26.6667" y="8.88892" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="26.6667" y="26.6666" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="26.6667" y="44.4443" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="26.6667" y="62.2223" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="44.4444" y="8.88892" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="44.4444" y="26.6666" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="44.4444" y="44.4443" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="44.4444" y="62.2223" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="62.2223" y="8.88892" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="62.2223" y="26.6666" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="62.2223" y="44.4443" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="62.2223" y="62.2223" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="17.7777" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="17.7777" y="17.7777" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="17.7777" y="35.5557" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="17.7777" y="53.3334" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="17.7777" y="71.1111" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="71.1111" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="71.1111" y="17.7777" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="71.1111" y="35.5557" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="71.1111" y="53.3334" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="71.1111" y="71.1111" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="53.3333" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="53.3333" y="17.7777" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="53.3333" y="35.5557" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="53.3333" y="53.3334" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="53.3333" y="71.1111" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="35.5556" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="35.5556" y="17.7777" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="35.5556" y="35.5557" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="35.5556" y="53.3334" width="8.88889" height="8.88889" fill="#DDDDDD"/>
-<rect x="35.5556" y="71.1111" width="8.88889" height="8.88889" fill="#DDDDDD"/>
+<rect width="8.88889" height="8.88889" fill="#999"/>
+<rect y="17.7777" width="8.88889" height="8.88889" fill="#999"/>
+<rect y="35.5557" width="8.88889" height="8.88889" fill="#999"/>
+<rect y="53.3334" width="8.88889" height="8.88889" fill="#999"/>
+<rect y="71.1111" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="8.88893" y="8.88892" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="8.88893" y="26.6666" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="8.88893" y="44.4443" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="8.88893" y="62.2223" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="26.6667" y="8.88892" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="26.6667" y="26.6666" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="26.6667" y="44.4443" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="26.6667" y="62.2223" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="44.4444" y="8.88892" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="44.4444" y="26.6666" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="44.4444" y="44.4443" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="44.4444" y="62.2223" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="62.2223" y="8.88892" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="62.2223" y="26.6666" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="62.2223" y="44.4443" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="62.2223" y="62.2223" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="17.7777" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="17.7777" y="17.7777" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="17.7777" y="35.5557" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="17.7777" y="53.3334" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="17.7777" y="71.1111" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="71.1111" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="71.1111" y="17.7777" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="71.1111" y="35.5557" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="71.1111" y="53.3334" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="71.1111" y="71.1111" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="53.3333" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="53.3333" y="17.7777" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="53.3333" y="35.5557" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="53.3333" y="53.3334" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="53.3333" y="71.1111" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="35.5556" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="35.5556" y="17.7777" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="35.5556" y="35.5557" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="35.5556" y="53.3334" width="8.88889" height="8.88889" fill="#999"/>
+<rect x="35.5556" y="71.1111" width="8.88889" height="8.88889" fill="#999"/>
 </svg>

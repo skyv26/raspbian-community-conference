@@ -1,13 +1,7 @@
 @use './breakpoints' as bp;
 
 @mixin media($size: xtra-large) {
-  @if $size == xtra-small {
-    @media (min-width: bp.$xsmall-mb) { @content};
-  }
-  @else if $size == small {
-    @media (min-width: bp.$small-mb) { @content};
-  }
-  @else if $size == medium {
+  @if $size == medium {
     @media (min-width: bp.$medium-mb) { @content};
   }
   @else if $size == ipad {
