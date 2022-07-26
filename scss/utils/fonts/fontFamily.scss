@@ -1,64 +1,66 @@
-*, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Italic-trial.ttf") format("truetype");
   font-weight: bold;
-  font-style: italic; }
+  font-style: italic;
+}
+
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Light-Italic-trial.ttf") format("truetype");
   font-weight: lighter;
-  font-style: italic; }
+  font-style: italic;
+}
+
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Light-trial.ttf") format("truetype");
   font-weight: lighter;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Semilight-Italic-trial.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic; }
+  font-style: italic;
+}
+
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Semilight-trial.ttf") format("truetype");
   font-weight: 600;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Thin-Italic-trial.ttf") format("truetype");
   font-weight: 300;
-  font-style: italic; }
+  font-style: italic;
+}
+
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Thin-trial.ttf") format("truetype");
   font-weight: 300;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-trial.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "cocogoose";
   src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Ultralight-trial.ttf") format("truetype");
   font-weight: 500;
-  font-style: normal; }
-.font-1 {
-  font-family: "Lato", sans-serif;
-  font-weight: bold; }
+  font-style: normal;
+}
 
-.font-2 {
-  font-family: "cocogoose", sans-serif;
-  font-weight: bold;
-  font-size: 4rem; }
-
-.font-3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold; }
-
-/*# sourceMappingURL=style.css.map */
+$lato: 'Lato', sans-serif;
+$cocogoose: 'cocogoose', sans-serif;
+$monteserrat: 'Montserrat', sans-serif;

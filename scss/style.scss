@@ -1,0 +1,18 @@
+@import './globals/globals';
+@import './utils/fonts/fontFamily.scss';
+
+.font-1 {
+  font-family: $lato;
+  font-weight: bold;
+}
+
+.font-2 {
+  font-family: $cocogoose;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.font-3 {
+  font-family: $monteserrat;
+  font-weight: bold;
+}

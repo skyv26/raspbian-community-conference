@@ -1,14 +1,10 @@
-/* CSS RESETTER */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-  &::after,
-  &::before {
+  &::before,
+  &::after {
     @extend *;
   }
 }
-
-/* END OF CSS RESETTER */
