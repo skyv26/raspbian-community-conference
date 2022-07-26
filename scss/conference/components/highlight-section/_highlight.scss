@@ -1,0 +1,83 @@
+@use '../../../utils/fonts' as font;
+@use '../../../utils/colors' as color;
+
+%display-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-highlight {
+  @extend %display-flex;
+  background-color: rgba(39, 42, 50);
+  background-image: url('../../../../assets/pattern_bg.png');
+  background-size: 12%;
+  font-family: font.$lato;
+  gap: 1.6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &_heading {
+    align-self: center;
+    color: color.$lighter-gray;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 2.5rem;
+      height: 1px;
+      background-color: color.$tomato;
+      transform: translate(-50%, 0)
+    }
+
+  }
+
+  &_group {
+    @extend %display-flex;
+    list-style: none;
+    gap: 0.6rem;
+
+    &--list {
+      display: grid;
+      grid-template-columns: 1fr 2fr 3fr;
+      // grid-column-gap: 1rem;
+      padding: 0.6rem;
+      column-gap: 0.75rem;
+      align-items: center;
+      font-size: 0.75rem;
+      justify-content: space-between;
+      // gap: 1rem;
+      background-color: rgba(200, 200, 200, 10%);
+
+      .icon {
+        color: color.$lighter-gray;
+        font-size: 2rem;
+      }
+
+      .topic {
+        font-size: 1rem;
+        font-weight: 900;
+        color: color.$tomato;
+      }
+
+      .detail {
+        color: color.$lighter-gray;
+      }
+    }
+  }
+
+  &_join {
+    align-self: center;
+    width: max-content;
+    color: white;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    background-color: color.$blood-red;
+  }
+}
