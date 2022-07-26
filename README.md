@@ -49,6 +49,10 @@ To get a local copy up and running follow these simple example steps.
 
 - You can simply use run-server vscode extension to run this website on your local browser.
 
+- In order to compile the scss file to plain css. Use below command
+  
+  `sass --watch scss/style.scss:css/style.css`
+
 ### Run tests
 
 I have added the linters or tests in order to avoid anykind of typos and ensure the good practices in this project. So while using this repository if you need to check your work no matters have worked on html, css and js you can use below commands
@@ -85,7 +89,6 @@ click [this](https://pages.github.com/) link
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
-
 
 
 ## Show your support

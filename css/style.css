@@ -1,64 +1,53 @@
-*, ::before, ::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
+.header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.348);
+  padding: 1.25rem 1.45rem;
+  display: flex;
+  flex-direction: row;
+}
+.header.active > .mobile-header--hamburgur_icon.active {
+  gap: 0;
+  transform: translate(0, -0.25rem);
+  transition: all 0.25s ease-in;
+}
+.header.active > .mobile-header--hamburgur_icon.active .bar-1 {
+  transform: rotate(-45deg) translate(-0.25rem, 0.2rem);
+  transition: all 0.25s ease-in;
+}
+.header.active > .mobile-header--hamburgur_icon.active .bar-3 {
+  transform: rotate(45deg) translate(-0.05rem, -0.075rem);
+  transition: all 0.25s ease-in;
+}
+.header.active > .mobile-header--hamburgur_icon.active .bar-2 {
+  height: 0;
+  transition: all 0.25s ease-in;
+}
 
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Italic-trial.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic; }
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Light-Italic-trial.ttf") format("truetype");
-  font-weight: lighter;
-  font-style: italic; }
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Light-trial.ttf") format("truetype");
-  font-weight: lighter;
-  font-style: normal; }
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Semilight-Italic-trial.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic; }
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Semilight-trial.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal; }
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Thin-Italic-trial.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic; }
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Thin-trial.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal; }
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-trial.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
-@font-face {
-  font-family: "cocogoose";
-  src: url("../../../assets/fonts/cocogoose/Cocogoose-Pro-Ultralight-trial.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
-.font-1 {
-  font-family: "Lato", sans-serif;
-  font-weight: bold; }
+.mobile-header--hamburgur_icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: all 0.25s ease-in-out;
+}
+.mobile-header--hamburgur_icon .bar {
+  height: 0.4rem;
+  background-color: #272a31;
+  transition: all 0.25s ease-in-out;
+}
 
-.font-2 {
-  font-family: "cocogoose", sans-serif;
-  font-weight: bold;
-  font-size: 4rem; }
-
-.font-3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold; }
+@media (min-width: 20em) {
+  body {
+    background-color: red;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

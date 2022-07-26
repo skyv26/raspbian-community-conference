@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.348);
+  padding: 1.25rem 1.45rem;
+  display: flex;
+  flex-direction: row;
+
+  &.active > .mobile-header--hamburgur_icon.active {
+    gap: 0;
+    & .bar-1 {
+      transform: rotate(-45deg) translate(-0.25rem, 0.2rem);
+      transition: all 0.25s ease-in;
+    }
+    & .bar-3 {
+      transform: rotate(45deg) translate(-0.05rem, -0.075rem);
+      transition: all 0.25s ease-in;
+    }
+    & .bar-2 {
+      height: 0;
+      transition: all 0.25s ease-in;
+    }
+    transform: translate(0,-0.25rem);
+    transition: all 0.25s ease-in;
+  }
+}
