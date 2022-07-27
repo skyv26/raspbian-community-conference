@@ -10,44 +10,53 @@
 .event-info {
   @extend %flex-box;
 
-  gap: 1rem;
-  padding-top: 5.25rem;
-  padding-bottom: 4.25rem;
-  background-image: url('../../../../assets/x-small-mobile-back.png');
+  gap: 1.6rem;
+  padding-top: 8.4rem;
+  padding-bottom: 8.4rem;
+  background-image: url('../../../../assets/background.svg');
   background-repeat: no-repeat;
   background-size: cover;
 
   &_welcome {
     @extend %flex-box;
 
-    gap: 0.6rem;
+    gap: 0.96rem;
     font-family: font.$lato;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: color.$tomato;
 
     .banner {
-      font-family: font.$lato;
-      font-size: 1.4rem;
+      font-family: font.$cocogoose;
+      font-size: 2rem;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 1px;
       line-height: 1.15;
       padding-left: 3.5px;
-      background-image: url('../../../../assets/118.jpg');
-      background-repeat: no-repeat;
-      background-size: 100% 50rem;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: rgba(255, 255, 255, 0);
+      // background-image: url('../../../../assets/118.jpg');
+      // background-repeat: no-repeat;
+      // background-size: 100% 50rem;
+      // background-clip: text;
+      // -webkit-background-clip: text;
+      // color: rgba(255, 255, 255, 0);
+    }
+
+    .year {
+      @extend .banner;
+
+      font-family: font.$lato;
+      display: inline;
+      font-size: 2.35rem;
+      margin-top: -1.25rem;
     }
   }
 
   &_summary {
-    padding: 1rem;
-    outline: 4px solid white;
+    padding: 1.6rem;
+    outline: 3px solid white;
     box-shadow: inset 0 0 4px  rgba(0, 0, 0, 0.1);
-    font-size: 0.63rem;
+    font-size: 0.96rem;
     font-family: font.$lato;
     font-weight: 600;
     line-height: 1.8;
@@ -63,12 +72,12 @@
     color: color.$blue-black;
     font-family: font.$lato;
     font-weight: 900;
-    font-size: 1.4rem;
+    font-size: 2rem;
     letter-spacing: 0.25px;
 
     .venue {
       font-weight: 700;
-      font-size: 0.7rem;
+      font-size: 1.1rem;
     }
   }
 

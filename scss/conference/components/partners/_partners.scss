@@ -1,0 +1,55 @@
+@use '../../../utils/fonts' as font;
+@use '../../../utils/colors/' as color;
+
+%display-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.partners {
+  @extend %display-flex;
+
+  font-family: font.$lato;
+  background-color: color.$blue-black;
+  gap: 3rem;
+  padding-top: 3.6rem;
+  padding-bottom: 3.6rem;
+
+  &_heading {
+    align-self: center;
+    color: color.$lighter-gray;
+    text-transform: capitalize;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 1.6rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 4rem;
+      height: 1px;
+      background-color: color.$tomato;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &_group {
+    @extend %display-flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .list {
+      .brands {
+        width: 7rem;
+        display: inline-block;
+      }
+    }
+  }
+}

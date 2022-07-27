@@ -2,31 +2,31 @@
 @use '../breakpoints/mixins' as *;
 
 .mobile-header--hamburgur_icon {
-  width: 2rem;
-  height: 1.8rem;
+  width: 3rem;
+  height: 2.5rem;
   padding: 0.25rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 0.275rem;
+  gap: 0.3rem;
   transition: all 0.25s ease-in-out;
 
   .bar {
-    height: 0.275rem;
+    height: 1rem;
     background-color: color.$blue-black;
+    border-radius: 1px;
     transition: all 0.25s ease-in-out;
   }
 }
 
-@include media(medium) {
-  .mobile-header--hamburgur_icon {
-    width: 2.6rem;
-    height: 2.6rem;
-    padding: 0.25rem;
-    gap: 0.3rem;
-  }
+// @include media(medium) {
+//   .mobile-header--hamburgur_icon {
+//     width: 2.6rem;
+//     height: 2.6rem;
+//     padding: 0.25rem;
+//     gap: 0.3rem;
+//   }
 
-  .bar {
-    height: 0.4rem;
-  }
-}
+//   .bar {
+//     height: 0.4rem;
+//   }

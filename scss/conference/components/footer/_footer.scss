@@ -1,0 +1,43 @@
+@use '../../../utils/colors' as color;
+@use '../../../utils/fonts' as font;
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  font-family: font.$lato;
+  background-color: color.$lighter-gray;
+  align-items: center;
+  justify-content: space-between;
+  color: color.$blue-black;
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  &-link {
+    text-decoration: none;
+
+    &_logo {
+      display: block;
+      width: 90%;
+    }
+  }
+
+  &--credits {
+    line-height: 1.75;
+    letter-spacing: 0.25px;
+
+    .credit {
+      .link {
+        font-weight: 900;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover,
+        &:active {
+          color: color.$tomato;
+        }
+      }
+    }
+  }
+}
