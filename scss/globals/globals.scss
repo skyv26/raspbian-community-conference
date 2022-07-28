@@ -8,3 +8,30 @@
     @extend *;
   }
 }
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  background-color: black;
+}
+
+body {
+  // max-width: 320px;
+  height: 100%;
+  margin: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.padx {
+  padding: 1.1rem 1.75rem;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

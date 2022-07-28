@@ -1,3 +1,12 @@
+
 @use './globals/globals.scss';
-@use './conference/components/header';
 @use './animated-hamburger/hamburger';
+@use './conference/components/header';
+@use './conference/components/event-section';
+@use './conference/components/highlight-section';
+@use './conference/components/featured';
+@use './conference/components/partners';
+@use './conference/components/footer';
+
+// About Page
+@use './conference/components/about';

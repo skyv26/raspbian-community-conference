@@ -1,0 +1,129 @@
+@use '../../../utils/fonts' as font;
+@use '../../../utils/colors' as color;
+@use '../../../breakpoints/mixins' as *;
+@use '../../../common';
+
+.event-info {
+  @extend %info;
+
+  @include media(small) {
+    gap: 2.4rem;
+    padding-top: 8.4rem;
+    padding-bottom: 9.4rem;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2rem;
+
+      .banner {
+        font-size: 2.32rem;
+        line-height: 1.25;
+        padding-left: 4px;
+        background-size: 100% 50rem;
+      }
+
+      .year {
+        font-size: 2.75rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .dates {
+      font-size: 2.4rem;
+      letter-spacing: 0.25px;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  @include media(medium) {
+    gap: 2.4rem;
+    padding-top: 9.4rem;
+    padding-bottom: 10.4rem;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2.25rem;
+
+      .banner {
+        font-size: 2.5rem;
+        line-height: 1.25;
+        padding-left: 4px;
+        background-size: 100% 50rem;
+      }
+
+      .year {
+        font-size: 3rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.22rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .dates {
+      font-size: 2.4rem;
+      letter-spacing: 0.25px;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  @include media(ipad) {
+    gap: 2.4rem;
+    padding-top: 11.4rem;
+    padding-bottom: 12.4rem;
+    background-position: bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, right 7% top 48%;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2.75rem;
+
+      .banner {
+        font-size: 3.25rem;
+        line-height: 1.25;
+        padding-left: 6px;
+        background-size: 100% 70rem;
+      }
+
+      .year {
+        font-size: 4rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .dates {
+      font-size: 3rem;
+      letter-spacing: 0.25px;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
