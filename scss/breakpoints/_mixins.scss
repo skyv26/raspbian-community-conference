@@ -1,7 +1,11 @@
 @use './breakpoints' as bp;
 
 @mixin media($size: xtra-large) {
-  @if $size == medium {
+  @if $size == small {
+    @media (min-width: bp.$small-mb) { @content; }
+  }
+
+  @else if $size == medium {
     @media (min-width: bp.$medium-mb) { @content; }
   }
 

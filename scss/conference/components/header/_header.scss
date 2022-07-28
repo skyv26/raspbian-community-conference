@@ -1,16 +1,31 @@
 @use '../../../breakpoints/mixins' as *;
+@use '../../../utils/colors' as color;
+@use '../../../utils/fonts' as font;
+
+%display-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .header {
   width: 100%;
-  background-color: rgba(255, 255, 255, 1);
-  // padding: 0.6rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0);
   display: flex;
   flex-direction: row;
-  transition: all 0.35s ease-in;
+  position: absolute;
+  padding: 2rem 0 2rem 2rem;
+  font-family: font.$lato;
 
   &.active > .mobile-header--hamburgur_icon.active {
     gap: 0.6rem;
     width: 2.75rem;
+    transition: all 0.25s ease-in;
+
+    .bar {
+      background-color: color.$lighter-gray;
+    }
 
     .bar-1 {
       transform: rotate(-45deg) translate(-0.75rem, 0.6rem);
@@ -27,15 +42,87 @@
       transition: all 0.25s ease-in;
     }
 
-    transform: rotate(90deg) scale(1.2);
-    transition: all 0.35s ease-in;
+    transform: rotate(90deg) translate(2px, -4px)  scale(1.2);
   }
 
-  // @include media(tablet) {
-  //   & > .mobile-header--hamburgur_icon.active,
-  //   .mobile-header--hamburgur_icon {
-  //     width: 0;
-  //     transition: all 0.25s ease-out;
-  //   }
-  // }
+  &.active.mobile-header {
+    position: fixed;
+    width: 100%;
+    max-width: inherit;
+    height: 100vh;
+    max-height: inherit;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    background-color: color.$tomato;
+    z-index: 2;
+    overflow: hidden;
+    transition: all 0.25s ease-out;
+  }
+
+  &-logo {
+    display: inline-block;
+    width: 20rem;
+  }
+
+  &-nav {
+    align-items: flex-start;
+    margin-top: 4rem;
+    gap: 2.6rem;
+
+    &--list {
+      .link {
+        font-size: 3.25rem;
+        color: color.$lighter-gray;
+      }
+    }
+  }
+
+  @include media(medium) {
+    &.active > .mobile-header--hamburgur_icon.active {
+      gap: 0.6rem;
+      width: 3.75rem;
+
+      .bar {
+        height: 0.5rem;
+        background-color: color.$lighter-gray;
+      }
+
+      .bar-1 {
+        transform: rotate(-45deg) translate(-0.75rem, 0.6rem);
+        transition: all 0.25s ease-in;
+      }
+
+      .bar-3 {
+        transform: rotate(45deg) translate(-0.5rem, -0.4rem);
+        transition: all 0.25s ease-in;
+      }
+
+      .bar-2 {
+        height: 0;
+        transition: all 0.25s ease-in;
+      }
+
+      transition: all 0.25s ease-in;
+      transform: rotate(90deg) translate(2px, -4px)  scale(1.2);
+    }
+  }
+
+  @include media(tablet) {
+    & > .mobile-header--hamburgur_icon.active,
+    .mobile-header--hamburgur_icon {
+      width: 0;
+      transition: all 0.25s ease-out;
+    }
+  }
 }
+
+// &:active {
+//   width: 100%;
+//   border-radius: 0;
+//   left: 0;
+//   top: 0;
+//   transform: translate(0,0);
+//   height: 100vh;
+//   transition: all 0.5s ease-in;
+// }

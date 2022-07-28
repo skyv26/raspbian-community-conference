@@ -1,5 +1,6 @@
 @use '../../../utils/fonts' as font;
 @use '../../../utils/colors/' as color;
+@use '../../../breakpoints' as *;
 
 %display-flex {
   display: flex;
@@ -49,6 +50,81 @@
       .brands {
         width: 7rem;
         display: inline-block;
+      }
+    }
+  }
+
+  @include media(small) {
+    gap: 4rem;
+    padding-top: 4.6rem;
+    padding-bottom: 4.6rem;
+
+    &_heading {
+      font-size: 2.6rem;
+      padding-bottom: 1.6rem;
+
+      &::after {
+        width: 4rem;
+      }
+    }
+
+    &_group {
+      gap: 2rem;
+
+      .list {
+        .brands {
+          width: 9rem;
+        }
+      }
+    }
+  }
+
+  @include media(medium) {
+    gap: 4.6rem;
+    padding-top: 4.6rem;
+    padding-bottom: 4.6rem;
+
+    &_heading {
+      font-size: 2.75rem;
+      padding-bottom: 1.6rem;
+
+      &::after {
+        width: 4rem;
+      }
+    }
+
+    &_group {
+      gap: 2.6rem;
+
+      .list {
+        .brands {
+          width: 10rem;
+        }
+      }
+    }
+  }
+
+  @include media(ipad) {
+    gap: 4.6rem;
+    padding-top: 4.6rem;
+    padding-bottom: 4.6rem;
+
+    &_heading {
+      font-size: 2.75rem;
+      padding-bottom: 1.6rem;
+
+      &::after {
+        width: 4rem;
+      }
+    }
+
+    &_group {
+      gap: 2.6rem;
+
+      .list {
+        .brands {
+          width: 13rem;
+        }
       }
     }
   }
