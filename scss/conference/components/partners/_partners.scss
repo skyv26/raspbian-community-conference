@@ -128,4 +128,29 @@
       }
     }
   }
+
+  @include media(mini-tab) {
+    gap: 2.6rem;
+    padding-top: 2.6rem;
+    padding-bottom: 2.6rem;
+
+    &_heading {
+      font-size: 2.75rem;
+      padding-bottom: 1.6rem;
+
+      &::after {
+        width: 4rem;
+      }
+    }
+
+    &_group {
+      gap: 2.6rem;
+
+      .list {
+        .brands {
+          width: 9rem;
+        }
+      }
+    }
+  }
 }

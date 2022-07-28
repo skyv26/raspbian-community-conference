@@ -13,6 +13,10 @@
     @media (min-width: bp.$medium-tab) { @content; }
   }
 
+  @else if $size == mini-tab {
+    @media (min-width: bp.$medium-tab1) { @content; }
+  }
+
   @else if $size == tablet {
     @media (min-width: bp.$tab) { @content; }
   }

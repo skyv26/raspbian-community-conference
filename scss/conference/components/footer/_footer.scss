@@ -110,4 +110,30 @@
       letter-spacing: 0.25px;
     }
   }
+
+  @include media(mini-tab) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-size: 1rem;
+
+    &-link {
+      text-decoration: none;
+      // gap: 6rem;
+
+      &_logo {
+        width: 17rem;
+      }
+    }
+
+    &--credits {
+      width: 60%;
+      line-height: 1.75;
+      letter-spacing: 0.25px;
+
+      .text,
+      .credit {
+        display: inline;
+      }
+    }
+  }
 }

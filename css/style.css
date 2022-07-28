@@ -216,14 +216,6 @@ ul {
   }
 }
 
-@media (min-width: 48em) {
-  .header > .mobile-header--hamburgur_icon.active,
-  .header .mobile-header--hamburgur_icon {
-    width: 0;
-    transition: all 0.25s ease-out;
-  }
-}
-
 .about-info .welcome,
 .event-info .welcome,
 .about-info,
@@ -641,6 +633,75 @@ ul {
   }
 }
 
+@media (min-width: 37em) {
+  .program-highlight {
+    background-size: 6%;
+    gap: 6rem;
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+  }
+
+  .program-highlight_heading {
+    font-size: 2.6rem;
+  }
+
+  .program-highlight_heading::after {
+    width: 4rem;
+  }
+
+  .program-highlight_group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .program-highlight_group--list {
+    grid-template-columns: 1fr;
+    padding: 1.75rem;
+    gap: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: center;
+    align-content: flex-start;
+  }
+
+  .program-highlight_group--list .icon {
+    font-size: 4rem;
+  }
+
+  .program-highlight_group--list .topic {
+    font-size: 2rem;
+  }
+
+  .program-highlight_group--list:nth-child(4),
+  .program-highlight_group--list:nth-child(5) {
+    margin-left: 50%;
+  }
+
+  .program-highlight_join {
+    font-size: 1.75rem;
+    padding: 2rem 4rem;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    visibility: hidden;
+  }
+
+  .program-highlight_join::after {
+    content: "See The Whole Program";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: inherit;
+    visibility: visible;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline gray;
+  }
+}
+
 .featured-speaker_group .list-detail .name,
 .featured-speaker_group .list-detail,
 .featured-speaker_group,
@@ -955,6 +1016,74 @@ ul {
   }
 }
 
+@media (min-width: 37em) {
+  .featured-speaker {
+    gap: 5.6rem;
+    padding-top: 4rem;
+    padding-bottom: 0;
+  }
+
+  .featured-speaker_heading {
+    font-size: 2.6rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .featured-speaker_heading::after {
+    width: 4rem;
+  }
+
+  .featured-speaker_group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    height: auto;
+  }
+
+  .featured-speaker_group--list {
+    background-image: url("../../../../assets/gray-mobile-check.svg");
+    padding: 1.4rem 0 0 1.4rem;
+    column-gap: 1.6rem;
+  }
+
+  .featured-speaker_group--list .img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .featured-speaker_group .list-detail {
+    margin-top: 0;
+  }
+
+  .featured-speaker_group .list-detail .name {
+    gap: 0.6rem;
+    font-weight: 700;
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .featured-speaker_group .list-detail .name::after {
+    width: 2.6rem;
+  }
+
+  .featured-speaker_group .list-detail .name .designation {
+    font-size: 1.2rem;
+  }
+
+  .featured-speaker_group .list-detail .detail {
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    line-height: 1.6;
+  }
+
+  .featured-speaker_more {
+    width: 0;
+    font-size: 0;
+    padding: 0;
+    border-radius: 0;
+    gap: 0;
+  }
+}
+
 .partners_group,
 .partners {
   display: flex;
@@ -1078,6 +1207,31 @@ ul {
   }
 }
 
+@media (min-width: 37em) {
+  .partners {
+    gap: 2.6rem;
+    padding-top: 2.6rem;
+    padding-bottom: 2.6rem;
+  }
+
+  .partners_heading {
+    font-size: 2.75rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .partners_heading::after {
+    width: 4rem;
+  }
+
+  .partners_group {
+    gap: 2.6rem;
+  }
+
+  .partners_group .list .brands {
+    width: 9rem;
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -1186,6 +1340,33 @@ ul {
   .footer--credits {
     line-height: 1.75;
     letter-spacing: 0.25px;
+  }
+}
+
+@media (min-width: 37em) {
+  .footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-size: 1rem;
+  }
+
+  .footer-link {
+    text-decoration: none;
+  }
+
+  .footer-link_logo {
+    width: 17rem;
+  }
+
+  .footer--credits {
+    width: 60%;
+    line-height: 1.75;
+    letter-spacing: 0.25px;
+  }
+
+  .footer--credits .text,
+  .footer--credits .credit {
+    display: inline;
   }
 }
 
