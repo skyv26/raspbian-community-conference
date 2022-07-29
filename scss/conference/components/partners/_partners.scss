@@ -153,4 +153,60 @@
       }
     }
   }
+
+  @include media(tablet) {
+    gap: 2.6rem;
+
+    &.padx {
+      padding-top: 3.6rem;
+      padding-bottom: 3.6rem;
+    }
+
+    &_heading {
+      font-size: 2.25rem;
+      padding-bottom: 1rem;
+
+      &::after {
+        width: 3rem;
+      }
+    }
+
+    &_group {
+      gap: 4rem;
+
+      .list {
+        .brands {
+          width: 9.6rem;
+        }
+      }
+    }
+  }
+
+  @include media(s-lap) {
+    gap: 2.6rem;
+
+    &.padx {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    &_heading {
+      font-size: 2.25rem;
+      padding-bottom: 1rem;
+
+      &::after {
+        width: 3rem;
+      }
+    }
+
+    &_group {
+      gap: 6rem;
+
+      .list {
+        .brands {
+          width: 13rem;
+        }
+      }
+    }
+  }
 }

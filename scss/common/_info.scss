@@ -81,4 +81,11 @@
       font-size: 1.1rem;
     }
   }
+
+  @include media(tablet) {
+    background-image: url('../../../../assets/rpi_vector.svg'), url('../../../../assets/patt.svg'), url('../../../../assets/arduino.svg'), url('../../../../assets/checkbox-feature.svg'), url('../../../../assets/Ellipse.svg'), url('../../../../assets/desktop-bg.webp');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 40%, 12%, 15%, 15%, 20%, cover;
+    background-position: top 0 left 0, bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, right 7% top 45%;
+  }
 }

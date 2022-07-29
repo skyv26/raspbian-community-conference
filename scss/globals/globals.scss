@@ -1,3 +1,5 @@
+@use '../breakpoints/mixins' as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -12,11 +14,9 @@
 html {
   font-size: 62.5%;
   min-height: 100%;
-  background-color: black;
 }
 
 body {
-  // max-width: 600px;
   height: 100%;
   margin: auto;
   scroll-behavior: smooth;
@@ -26,6 +26,24 @@ body {
 .padx {
   padding: 1.1rem 1.75rem;
   width: 100%;
+
+  @include media(tablet) {
+    &.padx {
+      padding: 1.1rem 5.25rem;
+    }
+  }
+
+  @include media(xs-lap) {
+    &.padx {
+      padding: 1.1rem 13rem;
+    }
+  }
+
+  @include media(s-lap) {
+    &.padx {
+      padding: 1.1rem 16rem;
+    }
+  }
 }
 
 a {

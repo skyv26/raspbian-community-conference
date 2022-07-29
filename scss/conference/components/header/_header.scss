@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   position: absolute;
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem;
   font-family: font.$lato;
 
   &.active > .mobile-header--hamburgur_icon.active {
@@ -60,22 +60,10 @@
     transition: all 0.25s ease-out;
   }
 
-  &-logo {
-    display: inline-block;
-    width: 20rem;
-  }
-
-  &-nav {
-    align-items: flex-start;
-    margin-top: 4rem;
-    gap: 2.6rem;
-
-    &--list {
-      .link {
-        font-size: 3.25rem;
-        color: color.$lighter-gray;
-      }
-    }
+  &-main_nav,
+  .desktop-cta__container {
+    position: absolute;
+    display: none;
   }
 
   @include media(medium) {
@@ -108,21 +96,238 @@
     }
   }
 
-  // @include media(tablet) {
-  //   & > .mobile-header--hamburgur_icon.active,
-  //   .mobile-header--hamburgur_icon {
-  //     width: 0;
-  //     transition: all 0.25s ease-out;
-  //   }
-  // }
-}
+  @include media(tablet) {
+    position: relative;
+    flex-direction: column;
+    background-color: color.$lighter-gray;
+    padding: 0;
 
-// &:active {
-//   width: 100%;
-//   border-radius: 0;
-//   left: 0;
-//   top: 0;
-//   transform: translate(0,0);
-//   height: 100vh;
-//   transition: all 0.5s ease-in;
-// }
+    & > .mobile-header--hamburgur_icon.active,
+    .mobile-header--hamburgur_icon {
+      width: 0;
+      position: absolute;
+      transition: all 0.25s ease-out;
+    }
+
+    .desktop-cta__container {
+      display: flex;
+      position: relative;
+      align-items: center;
+      background-color: color.$blue-black;
+
+      &--uList {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        flex-direction: row;
+        gap: 1.75rem;
+
+        .link {
+          font-family: font.$cocogoose;
+          font-weight: 600;
+          color: color.$lighter-gray;
+          font-size: 0.9rem;
+          align-self: center;
+          vertical-align: middle;
+
+          .icon {
+            font-size: 1.225rem;
+          }
+        }
+
+        .lang-prefer {
+          font-family: font.$cocogoose;
+          font-weight: 600;
+          background-color: transparent;
+          border: none;
+          color: white;
+          font-size: 0.9rem;
+          vertical-align: middle;
+
+          &:hover {
+            outline: thin solid black;
+          }
+
+          .opt {
+            font-size: 1.2rem;
+            color: black;
+          }
+        }
+      }
+    }
+
+    &-main_nav {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      width: 100%;
+
+      &.padx {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+      }
+
+
+      &-logo {
+        width: 14rem;
+      }
+
+      &__ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 3rem;
+        width: 100%;
+        align-items: center;
+        font-family: font.$cocogoose;
+
+        .list {
+          .link {
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding-bottom: 2.2rem;
+            position: relative;
+            color: transparentize($color: color.$blue-black, $amount: 0.25);
+
+            &::after {
+              position: absolute;
+              content: '';
+              left: 0;
+              bottom: -10%;
+              width: 100%;
+              border-bottom: 2px solid transparent;
+            }
+          }
+
+          &:last-child {
+            box-shadow: 0 0 2px 3px color.$tomato;
+            padding: 0.6rem 2rem;
+            color: color.$tomato;
+
+            .link {
+              border-color: transparent;
+
+              &::after {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media(xs-lap) {
+    .desktop-cta__container {
+      &--uList {
+        gap: 1.75rem;
+
+        .link {
+          font-size: 0.9rem;
+
+          .icon {
+            font-size: 1.225rem;
+          }
+        }
+
+        .lang-prefer {
+          font-size: 0.9rem;
+
+          .opt {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    &-main_nav {
+      &.padx {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+      }
+
+
+      &-logo {
+        width: 14rem;
+      }
+
+      &__ul {
+        gap: 3rem;
+
+        .list {
+          .link {
+            font-size: 0.9rem;
+            padding-bottom: 2.2rem;
+
+            &::after {
+              bottom: -10%;
+            }
+          }
+
+          &:last-child {
+            box-shadow: 0 0 2px 3px color.$tomato;
+            padding: 0.6rem 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(s-lap) {
+    .desktop-cta__container {
+      &--uList {
+        gap: 2rem;
+
+        .link {
+          font-size: 1.1rem;
+
+          .icon {
+            font-size: 1.6rem;
+          }
+        }
+
+        .lang-prefer {
+          font-size: 1.1rem;
+
+          &:hover {
+            outline: thin solid black;
+          }
+
+          .opt {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    &-main_nav {
+      &.padx {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+      }
+
+
+      &-logo {
+        width: 20rem;
+      }
+
+      &__ul {
+        gap: 5rem;
+        width: 100%;
+
+        .list {
+          .link {
+            font-size: 1.4rem;
+            padding-bottom: 2.2rem;
+          }
+
+          &:last-child {
+            padding: 1rem 2rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,41 +13,63 @@
   <link rel="shortcut icon" href="./../assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header class="header padx mobile-header desktop-header">
-    <div class="mobile-header--hamburgur_icon active">
+  <header class="header mobile-header desktop-header">
+    <div class="padx mobile-header--hamburgur_icon active">
       <span class="bar bar-1"></span>
       <span class="bar bar-2"></span>
       <span class="bar bar-3"></span>
     </div>
-    <!-- <img src="./assets/white-logo.svg" alt="raspberry pi foundation" class="header-logo"> -->
-    <!-- <ul class="header-nav">
-      <li class="header-nav_list">
-        <a href="./index.html" id="home" class="link">Home</a>
-      </li>
+    <nav class="padx desktop-cta__container">
+      <ul class="desktop-cta__container--uList">
+        <li class="list"><a href="#" class="link" rel="noopener" target="_blank" aria-label="connect with us on facebook"><i class="fa-brands fa-facebook-f icon"></i></a></li>
+        <li class="list"><a href="#" class="link" rel="noopener" target="_blank" aria-label="connect with us on twitter"><i class="fa-brands fa-twitter icon"></i></a></li>
+        <li class="list">
+          <select name="lang" id="lang" class="lang-prefer">
+            <option value="eng" class="opt">English</option>
+            <option value="kr" class="opt">한국어</option>
+            <option value="hi" class="opt">हिन्दी</option>
+            <option value="pb" class="opt">ਪੰਜਾਬੀ</option>
+            <option value="ur" class="opt">اردو</option>
+            <option value="ar" class="opt">عربى</option>
+            <option value="ru" class="opt">русский</option>
+          </select>
+        </li>
+        <li class="list"><a href="#" class="link" aria-label="click on the link to see my page">My Page</a></li>
+        <li class="list"><a href="#" class="link" aria-label="logout button">Logout</a></li>
+      </ul>
+      
+    </nav>
+    <nav class="padx header-main_nav">
+      <img src="./assets/color-logo.svg" alt="raspberry pi foundation" class="header-main_nav-logo">
+      <ul class="header-main_nav__ul">
+        <li class="list">
+          <a href="./index.html" id="home" class="link">Home</a>
+        </li>
 
-      <li class="header-nav_list">
-        <a href="./about.html" id="about" class="link">About</a>
-      </li>
+        <li class="list">
+          <a href="./about.html" id="about" class="link">About</a>
+        </li>
 
-      <li class="header-nav_list">
-        <a href="#" class="link">Program</a>
-      </li>
+        <li class="list">
+          <a href="#highlight" class="link">Program</a>
+        </li>
 
-      <li class="header-nav_list">
-        <a href="#" class="link">Join</a>
-      </li>
+        <li class="list">
+          <a href="#featured" class="link">Join</a>
+        </li>
 
-      <li class="header-nav_list">
-        <a href="#" class="link">Sponsor</a>
-      </li>
+        <li class="list">
+          <a href="#partner" class="link">Sponsor</a>
+        </li>
 
-      <li class="header-nav_list">
-        <a href="#" class="link">Home</a>
-      </li>
-    </ul> -->
+        <li class="list">
+          <a href="#" class="link">Contact</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main class="main">
-    <section class="section padx about-info" id="about">
+    <section class="section padx about-info" id="about-info">
       <h1 class="welcome">"Hello, Sharing world"<br /><span class="banner">Raspbian Foundation<br />Annual Conference 2022<br /></span></h1>
       <p class="summary">
         The launch event is your opportunity to meet and mingle with members of the Centre's research team and listen to a series of short talks. We are delighted that<span class="summary-break"></span> Prof. Mark Guzdial (University of Michigan), who many readers will be familiar with, will be travelling from the US to join us in cutting the ribbon. Mark has worked in computer science education for decades and won many awards for his research, so I can't think of anybody better to be our guest speaker. Our other speakers are Prof. Alastair Beresford from the Department of Computer Science and Technology, and Carrie Anne Philbin MBE, our Director of Educator Support at the Foundation.
@@ -96,7 +118,7 @@
     <div class="footer--credits">
       <p class="text">2022 Raspbian Community Conference </p>
       <p class="credit developer">Made with ❤️ By <a href="https://www.linkedin.com/in/devaakash/" class="link">Aakash Verma</a></p>
-      <p class="credit designer">Inspired by <a href="https://www.behance.net/adagio07" class="link">Cindy Shin</a></p>
+      <p class="credit designer">Inspired by <a href="https://www.behance.net/adagio07" class="link">Cindy Shin 💎</a></p>
     </div>
   </footer>
   <script src="./../js/index.js" type="module"></script>

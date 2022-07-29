@@ -136,4 +136,62 @@
       }
     }
   }
+
+  @include media(tablet) {
+    &.padx {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    font-size: 1.3rem;
+
+    &-link {
+      text-decoration: none;
+      // gap: 6rem;
+
+      &_logo {
+        width: 17rem;
+      }
+    }
+
+    &--credits {
+      width: 60%;
+      line-height: 1.75;
+      letter-spacing: 0.25px;
+
+      .text,
+      .credit {
+        display: inline;
+      }
+    }
+  }
+
+  @include media(s-lap) {
+    &.padx {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    font-size: 1.6rem;
+
+    &-link {
+      text-decoration: none;
+      // gap: 6rem;
+
+      &_logo {
+        width: 22rem;
+      }
+    }
+
+    &--credits {
+      width: 60%;
+      line-height: 1.75;
+      letter-spacing: 0.25px;
+
+      .text,
+      .credit {
+        display: inline;
+      }
+    }
+  }
 }
