@@ -96,9 +96,9 @@ const menuObserverHandler = (entries) => {
       const randomElement = entry.target.getAttribute('id');
       const randomTargetElement = document.querySelector(`[href='#${randomElement}']`);
       if (randomTargetElement === null) {
-        if (window.location.pathname.includes('index')) {
+        if (window.location.href.includes('index')) {
           document.querySelector('#home').parentElement.classList.add('active');
-        } else {
+        } else if (window.location.href.includes('about')) {
           document.querySelector('#about').parentElement.classList.add('active');
         }
       } else {
