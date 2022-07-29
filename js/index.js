@@ -49,20 +49,23 @@ const windowResizerChecker = () => {
 
 window.addEventListener('resize', windowResizerChecker);
 
-featuredSpeakerGroupButton.addEventListener('click', function thisHandler() {
-  featuredSpeakerGroup.classList.toggle('active');
-  const iTag = document.createElement('i');
-  if (featuredSpeakerGroup.className.includes('active')) {
-    this.textContent = 'LESS';
-    iTag.className = 'fa-solid fa-chevron-up icon';
-    this.appendChild(iTag);
-  } else {
-    this.textContent = 'MORE';
-    iTag.className = 'fa-solid fa-chevron-down icon';
-    this.appendChild(iTag);
-  }
-});
-
+try {
+  featuredSpeakerGroupButton.addEventListener('click', function thisHandler() {
+    featuredSpeakerGroup.classList.toggle('active');
+    const iTag = document.createElement('i');
+    if (featuredSpeakerGroup.className.includes('active')) {
+      this.textContent = 'LESS';
+      iTag.className = 'fa-solid fa-chevron-up icon';
+      this.appendChild(iTag);
+    } else {
+      this.textContent = 'MORE';
+      iTag.className = 'fa-solid fa-chevron-down icon';
+      this.appendChild(iTag);
+    }
+  });
+} catch (err) {
+  return;
+}
 const headerOptions = {
   root: null,
   rootMargin: '50px',
