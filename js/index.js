@@ -1,4 +1,3 @@
-const hamburgurIcon = document.querySelector('.mobile-header--hamburgur_icon');
 const logo = document.querySelector('.header-main_nav-logo');
 const header = document.querySelector('.header');
 const getAllSection = document.querySelectorAll('.section');
