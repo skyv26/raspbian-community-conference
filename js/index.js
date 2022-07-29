@@ -64,8 +64,9 @@ try {
     }
   });
 } catch (err) {
-  return;
+  // console.log('about.html');
 }
+
 const headerOptions = {
   root: null,
   rootMargin: '50px',
