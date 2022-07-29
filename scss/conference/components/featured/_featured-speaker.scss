@@ -313,4 +313,165 @@
       gap: 1rem;
     }
   }
+
+  @include media(mini-tab) {
+    gap: 5.6rem;
+    padding-top: 4rem;
+    padding-bottom: 0;
+
+    &_heading {
+      font-size: 2.6rem;
+      padding-bottom: 1.6rem;
+
+      &::after {
+        width: 4rem;
+      }
+    }
+
+    &_group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      height: auto;
+
+      &--list {
+        background-image: url('../../../../assets/gray-mobile-check.svg');
+        padding: 1.4rem 0 0 1.4rem;
+        column-gap: 1.6rem;
+
+        .img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      .list-detail {
+        margin-top: 0;
+
+        .name {
+          gap: 0.6rem;
+          font-weight: 700;
+          font-size: 1.75rem;
+          padding-bottom: 1rem;
+
+          &::after {
+            width: 2.6rem;
+          }
+
+          .designation {
+            font-size: 1.2rem;
+          }
+        }
+
+        .detail {
+          font-size: 0.9rem;
+          padding-top: 1rem;
+          line-height: 1.6;
+        }
+      }
+    }
+
+    &_more {
+      width: 0;
+      font-size: 0;
+      padding: 0;
+      border-radius: 0;
+      gap: 0;
+    }
+  }
+
+  @include media(tablet) {
+    gap: 5.6rem;
+
+    &.padx {
+      padding-top: 4rem;
+      padding-bottom: 0;
+    }
+
+    &_heading {
+      font-size: 2.25rem;
+      padding-bottom: 1.6rem;
+
+      &::after {
+        width: 3.6rem;
+      }
+    }
+
+    &_group {
+      gap: 3rem;
+      height: auto;
+
+      &--list {
+        background-image: url('../../../../assets/gray-mobile-check.svg');
+        padding: 1.4rem 0 0 1.4rem;
+        column-gap: 1.25rem;
+        cursor: pointer;
+
+        .img {
+          width: 11rem;
+          height: 11rem;
+        }
+      }
+    }
+  }
+
+  @include media(s-lap) {
+    gap: 5.6rem;
+
+    &.padx {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+
+    &_heading {
+      font-size: 2.25rem;
+      padding-bottom: 1.6rem;
+
+      &::after {
+        width: 3.6rem;
+      }
+    }
+
+    &_group {
+      gap: 5rem;
+      height: auto;
+
+      &--list {
+        background-image: url('../../../../assets/desktop-check.svg');
+        padding: 1.8rem 0 0 1.8rem;
+        column-gap: 1rem;
+        cursor: pointer;
+
+        .img {
+          width: 14rem;
+          height: 14rem;
+        }
+
+        .list-detail {
+          margin-top: 0;
+
+          .name {
+            gap: 0.6rem;
+            font-weight: 700;
+            font-size: 2.25rem;
+            padding-bottom: 1rem;
+
+            &::after {
+              width: 2.6rem;
+            }
+
+            .designation {
+              font-size: 1.3rem;
+            }
+          }
+
+          .detail {
+            font-size: 1.15rem;
+            padding-top: 1rem;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
 }

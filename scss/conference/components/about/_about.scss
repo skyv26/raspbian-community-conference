@@ -176,6 +176,106 @@
       }
     }
   }
+
+  @include media(tablet) {
+    gap: 4rem;
+
+    &.padx {
+      padding-top: 9rem;
+      padding-bottom: 9rem;
+    }
+
+    background-position: top 25% right 10%, bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, left 5% top 34%;
+    background-size: 25%, 8%, 10%, 10%, 10%, cover;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2.75rem;
+
+      .banner {
+        font-size: 3.75rem;
+        line-height: 1.25;
+        background-size: 100% 70rem;
+      }
+
+      .year {
+        font-size: 4rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.3em;
+      font-weight: 600;
+      line-height: 2;
+
+      &-break {
+        display: block;
+      }
+    }
+
+    .dates {
+      font-size: 1.8rem;
+      letter-spacing: 0.25px;
+      line-height: 1.6;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @include media(xs-lap) {
+    gap: 2rem;
+
+    &.padx {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+
+    background-position: top 25% right 10%, bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, left 5% top 34%;
+    background-size: 15%, 8%, 10%, 10%, 10%, cover;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2.75rem;
+
+      .banner {
+        font-size: 3.75rem;
+        line-height: 1.25;
+        background-size: 100% 70rem;
+      }
+
+      .year {
+        font-size: 4rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 2;
+
+      &-break {
+        display: block;
+      }
+    }
+
+    .dates {
+      font-size: 1.6rem;
+      letter-spacing: 0.25px;
+      line-height: 1.6;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 .about-highlight {
@@ -283,6 +383,37 @@
       margin-top: 5rem;
     }
   }
+
+  @include media(tablet) {
+    &.padx {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+
+    .heading {
+      font-size: 3rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 3rem;
+      line-height: 1.4;
+
+      &::after {
+        width: 4rem;
+        height: 1px;
+      }
+    }
+
+    .foundation {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .foundation-logo {
+      max-width: 35rem;
+      border: thin solid transparentize($color: color.$blue-black, $amount: 0.75);
+      padding: 1rem 2rem;
+      margin-top: 5rem;
+    }
+  }
 }
 
 .past-highlight {
@@ -381,6 +512,60 @@
 
           .img {
             height: 30rem;
+          }
+        }
+
+        .event-year {
+          font-size: 4rem;
+          line-height: 1.9;
+
+          .place {
+            font-size: 1.375rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &_wrapper {
+      gap: 2rem;
+      margin-top: 5rem;
+      flex-direction: row;
+
+      .list {
+        &-link {
+          font-size: 1.75rem;
+
+          .img {
+            max-height: 20rem;
+          }
+        }
+
+        .event-year {
+          font-size: 4rem;
+          line-height: 1.9;
+
+          .place {
+            font-size: 1.375rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(s-lap) {
+    &_wrapper {
+      gap: 2rem;
+      margin-top: 5rem;
+      flex-direction: row;
+
+      .list {
+        &-link {
+          font-size: 1.75rem;
+
+          .img {
+            max-height: 25rem;
           }
         }
 
