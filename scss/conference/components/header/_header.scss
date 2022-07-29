@@ -18,6 +18,12 @@
   padding: 2rem;
   font-family: font.$lato;
 
+  &-main_nav,
+  .desktop-cta__container {
+    position: absolute;
+    display: none;
+  }
+
   &.active > .mobile-header--hamburgur_icon.active {
     gap: 0.6rem;
     width: 2.75rem;
@@ -45,6 +51,14 @@
     transform: rotate(90deg) translate(2px, -4px)  scale(1.2);
   }
 
+  &.fixed.mobile-header {
+    position: fixed;
+    width: 100%;
+    max-width: inherit;
+    background-color: color.$lighter-gray;
+    z-index: 10;
+  }
+
   &.active.mobile-header {
     position: fixed;
     width: 100%;
@@ -60,10 +74,71 @@
     transition: all 0.25s ease-out;
   }
 
-  &-main_nav,
-  .desktop-cta__container {
-    position: absolute;
-    display: none;
+  &.active {
+    .header-main_nav {
+      display: flex;
+      position: relative;
+      flex-direction: column-reverse;
+      width: 100%;
+      gap: 4.6rem;
+
+      &.padx {
+        // padding-top: 1.75rem;
+        // padding-bottom: 1.75rem;
+        padding: 0;
+      }
+
+      &-logo {
+        border: 4px solid color.$lighter-gray;
+        width: 20rem;
+        padding: 1rem 2rem;
+      }
+
+      &__ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 4.6rem;
+        width: 100%;
+        margin-top: 4rem;
+        align-items: flex-start;
+        font-family: font.$cocogoose;
+
+        .list {
+          .link {
+            text-decoration: none;
+            font-size: 1.75rem;
+            font-weight: 600;
+            padding-bottom: 0;
+            position: relative;
+            color: transparentize($color: color.$lighter-gray, $amount: 0);
+
+            &::after {
+              position: absolute;
+              content: '';
+              left: 0;
+              bottom: -10%;
+              width: 100%;
+              border-bottom: 2px solid transparent;
+            }
+          }
+
+          &:last-child {
+            box-shadow: none;
+            padding: 0;
+            color: color.$tomato;
+
+            .link {
+              border-color: transparent;
+
+              &::after {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   @include media(medium) {
@@ -109,54 +184,6 @@
       transition: all 0.25s ease-out;
     }
 
-    .desktop-cta__container {
-      display: flex;
-      position: relative;
-      align-items: center;
-      background-color: color.$blue-black;
-
-      &--uList {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 100%;
-        flex-direction: row;
-        gap: 1.75rem;
-
-        .link {
-          font-family: font.$cocogoose;
-          font-weight: 600;
-          color: color.$lighter-gray;
-          font-size: 0.9rem;
-          align-self: center;
-          vertical-align: middle;
-
-          .icon {
-            font-size: 1.225rem;
-          }
-        }
-
-        .lang-prefer {
-          font-family: font.$cocogoose;
-          font-weight: 600;
-          background-color: transparent;
-          border: none;
-          color: white;
-          font-size: 0.9rem;
-          vertical-align: middle;
-
-          &:hover {
-            outline: thin solid black;
-          }
-
-          .opt {
-            font-size: 1.2rem;
-            color: black;
-          }
-        }
-      }
-    }
-
     &-main_nav {
       display: flex;
       position: relative;
@@ -189,6 +216,7 @@
             padding-bottom: 2.2rem;
             position: relative;
             color: transparentize($color: color.$blue-black, $amount: 0.25);
+            transition: all 0.2s ease-in;
 
             &::after {
               position: absolute;
@@ -197,6 +225,7 @@
               bottom: -10%;
               width: 100%;
               border-bottom: 2px solid transparent;
+              transition: all 0.25s ease-in;
             }
           }
 
@@ -206,6 +235,7 @@
             color: color.$tomato;
 
             .link {
+              color: color.$tomato;
               border-color: transparent;
 
               &::after {
@@ -213,6 +243,89 @@
               }
             }
           }
+
+          &.active {
+            .link {
+              color: color.$tomato;
+              transform: scale(1.2) translateY(-0.25rem);
+
+              &::after {
+                border-color: color.$tomato;
+                transition: all 0.25s ease-in;
+              }
+            }
+
+            transition: all 0.25s ease-in;
+          }
+
+          &:hover {
+            .link {
+              color: orange;
+              transform: scale(1.2) translateY(-0.25rem);
+
+              &::after {
+                border-color: orange;
+                transition: all 0.25s ease-in;
+              }
+            }
+
+            transition: all 0.25s ease-in;
+          }
+        }
+      }
+    }
+
+    .desktop-cta__container {
+      display: flex;
+      position: relative;
+      align-items: center;
+      background-color: color.$blue-black;
+
+      &--uList {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        flex-direction: row;
+        gap: 1.75rem;
+
+        .uList_link {
+          font-family: font.$cocogoose;
+          font-weight: 600;
+          color: color.$lighter-gray;
+          font-size: 0.9rem;
+          align-self: center;
+          transition: all 0.25s ease-out;
+
+          .icon {
+            font-size: 1.225rem;
+          }
+        }
+
+        .lang-prefer {
+          font-family: font.$cocogoose;
+          font-weight: 600;
+          background-color: transparent;
+          border: none;
+          color: white;
+          font-size: 0.9rem;
+          vertical-align: middle;
+
+          .opt {
+            font-size: 1.2rem;
+            color: black;
+            border: none;
+          }
+        }
+
+        .list:hover {
+          transform: scale(1.2) translateY(-0.25rem);
+
+          .link {
+            color: color.$tomato;
+          }
+
+          transition: all 0.25s ease-in;
         }
       }
     }
@@ -223,7 +336,7 @@
       &--uList {
         gap: 1.75rem;
 
-        .link {
+        .uList_link {
           font-size: 0.9rem;
 
           .icon {
@@ -278,7 +391,7 @@
       &--uList {
         gap: 2rem;
 
-        .link {
+        .uList_link {
           font-size: 1.1rem;
 
           .icon {

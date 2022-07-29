@@ -48,14 +48,13 @@
       width: 100%;
       display: grid;
       grid-template-columns: 1fr 2fr 3fr;
-      // grid-column-gap: 1rem;
       padding: 1.25rem;
       column-gap: 1.2rem;
       align-items: center;
       font-size: 1rem;
       justify-content: space-between;
-      // gap: 1rem;
       background-color: rgba(200, 200, 200, 10%);
+      transition: all 0.25s ease-out;
 
       .icon {
         color: color.$lighter-gray;
@@ -70,6 +69,13 @@
 
       .detail {
         color: color.$lighter-gray;
+      }
+
+      &:hover {
+        cursor: pointer;
+        outline: 2px solid color.$lighter-gray;
+        transform: scale(1.05);
+        transition: all 0.25s ease-in;
       }
     }
   }
@@ -265,6 +271,11 @@
         text-align: center;
         text-transform: uppercase;
         text-decoration: underline gray;
+      }
+
+      &:hover {
+        font-weight: 900;
+        color: color.$tomato;
       }
     }
   }

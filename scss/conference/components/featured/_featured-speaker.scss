@@ -54,6 +54,7 @@
       background-repeat: no-repeat;
       column-gap: 0.25rem;
       justify-content: safe;
+      transition: all 0.5s ease-out;
 
       .img {
         display: block;
@@ -62,6 +63,46 @@
         height: 7.6rem;
         object-fit: fill;
         object-position: top;
+      }
+
+      .contact-info {
+        position: absolute;
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+
+        &_list {
+          .list_link {
+            font-size: 3rem;
+            color: color.$lighter-gray;
+          }
+        }
+      }
+
+      &:hover {
+        position: relative;
+        cursor: auto;
+
+        &::after {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          mix-blend-mode: darken;
+          background-color: transparentize($color: rgba(255, 0, 25, 1), $amount: 0.2);
+        }
+
+        .contact-info {
+          display: flex;
+        }
+
+        transition: all 0.5s ease-out;
       }
     }
 

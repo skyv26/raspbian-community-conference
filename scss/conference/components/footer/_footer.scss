@@ -28,7 +28,7 @@
     background-color: color.$blue-black;
     color: color.$lighter-gray;
 
-    .link {
+    .credit_link {
       color: color.$lighter-gray;
     }
   }
@@ -38,7 +38,7 @@
     letter-spacing: 0.25px;
 
     .credit {
-      .link {
+      .credit_link {
         font-weight: 900;
         text-decoration: none;
         color: inherit;
