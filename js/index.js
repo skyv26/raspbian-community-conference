@@ -91,7 +91,6 @@ const menuObserverHandler = (entries) => {
       });
       const randomElement = entry.target.getAttribute('id');
       const randomTargetElement = document.querySelector(`[href='#${randomElement}']`);
-      // console.log(randomElement, randomTargetElement);
       if (randomTargetElement === null) {
         if (window.location.pathname.includes('index')) {
           document.querySelector('#home').parentElement.classList.add('active');
@@ -120,7 +119,6 @@ getAllSection.forEach((each) => {
 header.addEventListener('click', function mobileMenu(e) {
   const nodeElemet = e.target;
   if (nodeElemet.className.includes('mobile-header--hamburgur_icon') || nodeElemet.className.includes('bar')) {
-    // this.classList.toggle('mobile-menu--active');
     this.classList.toggle('active');
     logo.setAttribute('src', './assets/white-logo.svg');
   } else if (nodeElemet.className.includes('list') || nodeElemet.className.includes('link')) {
