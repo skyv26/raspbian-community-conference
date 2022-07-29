@@ -43,6 +43,7 @@
     gap: 2.6rem;
     height: 250px;
     overflow: hidden;
+    transition: height 1s ease-in;
 
     &--list {
       width: 100%;
@@ -147,6 +148,11 @@
         line-height: 1.25;
         font-weight: 400;
       }
+    }
+
+    &.active {
+      height: auto;
+      transition: height 1s ease-out;
     }
   }
 

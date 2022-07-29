@@ -2,6 +2,8 @@ const logo = document.querySelector('.header-main_nav-logo');
 const header = document.querySelector('.header');
 const getAllSection = document.querySelectorAll('.section');
 const getAllMenu = document.querySelectorAll('.header-main_nav__ul .list');
+const featuredSpeakerGroup = document.querySelector('.featured-speaker_group');
+const featuredSpeakerGroupButton = document.querySelector('.featured-speaker_more');
 
 const windowResizerChecker = () => {
   if (window.innerWidth >= 768) {
@@ -46,6 +48,20 @@ const windowResizerChecker = () => {
 // }});
 
 window.addEventListener('resize', windowResizerChecker);
+
+featuredSpeakerGroupButton.addEventListener('click', function thisHandler() {
+  featuredSpeakerGroup.classList.toggle('active');
+  const iTag = document.createElement('i');
+  if (featuredSpeakerGroup.className.includes('active')) {
+    this.textContent = 'LESS';
+    iTag.className = 'fa-solid fa-chevron-up icon';
+    this.appendChild(iTag);
+  } else {
+    this.textContent = 'MORE';
+    iTag.className = 'fa-solid fa-chevron-down icon';
+    this.appendChild(iTag);
+  }
+});
 
 const headerOptions = {
   root: null,
