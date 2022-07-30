@@ -24,12 +24,15 @@ const featuredSpeakerListHandler = (props) => `<li class="featured-speaker_group
 </div>
 <ul class="contact-info">
   ${Object.keys(props.social).map((each) => {
+    let temp;
     if (props.social[each]) {
-      return `<li class="contact-info_list">
-                  <a href=${props.social[each].link} class="list_link" rel="noopener noreferrer" target="_blank"  aria-label=${props.social[each].aria}>${props.social[each].logo}</a>
+      temp = `<li class="contact-info_list">
+                <a href=${props.social[each].link} class="list_link" rel="noopener noreferrer" target="_blank"  aria-label=${props.social[each].aria}>${props.social[each].logo}</a>
               </li>`;
     }
-  }).join('')}
+    return temp;
+  }).join('')
+}
 </ul>
 </li>`;
 
