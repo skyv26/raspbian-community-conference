@@ -29,7 +29,8 @@
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps. Please make sure on order to use the this project you need to install
+`DART-SASS` compiler.
 
 ### Prerequisites
 
