@@ -1,0 +1,39 @@
+@use './breakpoints' as bp;
+
+@mixin media($size: xtra-large) {
+  @if $size == small {
+    @media (min-width: bp.$small-mb) { @content; }
+  }
+
+  @else if $size == medium {
+    @media (min-width: bp.$medium-mb) { @content; }
+  }
+
+  @else if $size == ipad {
+    @media (min-width: bp.$medium-tab) { @content; }
+  }
+
+  @else if $size == mini-tab {
+    @media (min-width: bp.$medium-tab1) { @content; }
+  }
+
+  @else if $size == tablet {
+    @media (min-width: bp.$tab) { @content; }
+  }
+
+  @else if $size == xs-lap {
+    @media (min-width: bp.$xs-laptop) { @content; }
+  }
+
+  @else if $size == s-lap {
+    @media (min-width: bp.$s-laptop) { @content; }
+  }
+
+  @else if $size == large {
+    @media (min-width: bp.$m-laptop) { @content; }
+  }
+
+  @else {
+    @media (min-width: bp.$l-laptop) { @content; }
+  }
+}

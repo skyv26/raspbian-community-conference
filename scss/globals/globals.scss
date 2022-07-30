@@ -1,0 +1,55 @@
+@use '../breakpoints/mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    @extend *;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.padx {
+  padding: 1.1rem 1.75rem;
+  width: 100%;
+
+  @include media(tablet) {
+    &.padx {
+      padding: 1.1rem 5.25rem;
+    }
+  }
+
+  @include media(xs-lap) {
+    &.padx {
+      padding: 1.1rem 13rem;
+    }
+  }
+
+  @include media(s-lap) {
+    &.padx {
+      padding: 1.1rem 16rem;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
