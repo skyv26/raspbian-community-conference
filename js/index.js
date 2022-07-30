@@ -17,9 +17,9 @@ const windowResizerChecker = () => {
 };
 
 const featuredSpeakerListHandler = (props) => `<li class="featured-speaker_group--list">
-<img src=${props.image} alt=${props.name} class="img">
+<img src=${props.image} alt="see ${props.name}" class="img">
 <div class="list-detail">
-  <p class="name">${props.name}<span class="designation">${props.designation}</span></p>
+  <h3 class="name">${props.name}<span class="designation">${props.designation}</span></h3>
   <p class="detail">${props.about}</p>
 </div>
 <ul class="contact-info">
