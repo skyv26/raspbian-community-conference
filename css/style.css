@@ -1350,7 +1350,8 @@ ul {
   display: none;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 3rem;
   z-index: 1;
   width: 100%;
   height: 100%;

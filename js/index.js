@@ -1,3 +1,5 @@
+import conference from './conference.js';
+
 const logo = document.querySelector('.header-main_nav-logo');
 const header = document.querySelector('.header');
 const getAllSection = document.querySelectorAll('.section');
@@ -14,42 +16,41 @@ const windowResizerChecker = () => {
   }
 };
 
-// const main = document.querySelector('.main');
-// const header_nav = document.querySelector('.header-nav');
-// const footer = document.querySelector('.footer');
-// let stateObj = null;
+const featuredSpeakerListHandler = (props) => `<li class="featured-speaker_group--list">
+<img src=${props.image} alt=${props.name} class="img">
+<div class="list-detail">
+  <p class="name">${props.name}<span class="designation">${props.designation}</span></p>
+  <p class="detail">${props.about}</p>
+</div>
+<ul class="contact-info">
+  ${Object.keys(props.social).map((each) => {
+    let temp;
+    if (props.social[each]) {
+      temp = `<li class="contact-info_list">
+                <a href=${props.social[each].link} class="list_link" rel="noopener noreferrer" target="_blank"  aria-label=${props.social[each].aria}>${props.social[each].logo}</a>
+              </li>`;
+    }
+    return temp;
+  }).join('')
+}
+</ul>
+</li>`;
 
-// const ConvertStringToHTML = (str) => {
-//   const parser = new DOMParser();
-//   const doc = parser.parseFromString(str, 'text/html');
-//   return doc.body;
-// };
-
-// const removeWrapper = (obj, convert = true) => {
-//   let convertedObj = null;
-//   if (convert) {
-//     convertedObj = ConvertStringToHTML(obj).children;
-//     convertedObj = removeWrapper(convertedObj[0], false);
-//   }
-//   if (!convert) {
-//     return obj;
-//   }
-//   return convertedObj;
-// };
-
-// header_nav.addEventListener('click', function fetchTarget(e) {
-//   const targetElem = e.target;
-//   if (targetElem && targetElem.className.includes('link')) {
-//     const page=targetElem.textContent;
-//     if (page === 'Home') {
-//     } else if (page === 'About') {
-//     }
-
-// }});
+const ConvertStringToHTML = (str) => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(str, 'text/html');
+  return doc.body;
+};
 
 window.addEventListener('resize', windowResizerChecker);
 
 try {
+  const dynamicData = conference();
+  dynamicData.forEach((each) => {
+    const [data] = ConvertStringToHTML(featuredSpeakerListHandler(each)).children;
+    featuredSpeakerGroup.appendChild(data);
+  });
+
   featuredSpeakerGroupButton.addEventListener('click', function thisHandler() {
     featuredSpeakerGroup.classList.toggle('active');
     const iTag = document.createElement('i');
@@ -96,10 +97,12 @@ const menuObserverHandler = (entries) => {
       const randomElement = entry.target.getAttribute('id');
       const randomTargetElement = document.querySelector(`[href='#${randomElement}']`);
       if (randomTargetElement === null) {
-        if (window.location.pathname.includes('index')) {
+        if (window.location.href.includes('index')) {
           document.querySelector('#home').parentElement.classList.add('active');
-        } else {
+        } else if (window.location.href.includes('about')) {
           document.querySelector('#about').parentElement.classList.add('active');
+        } else if (window.location.href.includes('/')) {
+          document.querySelector('#home').parentElement.classList.add('active');
         }
       } else {
         randomTargetElement.parentElement.classList.add('active');
