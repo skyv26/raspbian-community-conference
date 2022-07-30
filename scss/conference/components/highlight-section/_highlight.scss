@@ -1,0 +1,387 @@
+@use '../../../utils/fonts' as font;
+@use '../../../utils/colors' as color;
+@use '../../../breakpoints' as *;
+
+%display-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-highlight {
+  @extend %display-flex;
+
+  background-color: rgba(39, 42, 50);
+  background-image: url('../../../../assets/pattern_bg.png');
+  background-size: 12%;
+  font-family: font.$lato;
+  gap: 2.6rem;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+
+  &_heading {
+    align-self: center;
+    color: color.$lighter-gray;
+    text-transform: capitalize;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 1.6rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 4rem;
+      height: 1px;
+      background-color: color.$tomato;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &_group {
+    @extend %display-flex;
+
+    list-style: none;
+    gap: 0.6rem;
+
+    &--list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 2fr 3fr;
+      padding: 1.25rem;
+      column-gap: 1.2rem;
+      align-items: center;
+      font-size: 1rem;
+      justify-content: space-between;
+      background-color: rgba(200, 200, 200, 10%);
+      transition: all 0.25s ease-out;
+
+      .icon {
+        color: color.$lighter-gray;
+        font-size: 2.6rem;
+      }
+
+      .topic {
+        font-size: 1.25rem;
+        font-weight: 900;
+        color: color.$tomato;
+      }
+
+      .detail {
+        color: color.$lighter-gray;
+      }
+
+      &:hover {
+        cursor: pointer;
+        outline: 2px solid color.$lighter-gray;
+        transform: scale(1.05);
+        transition: all 0.25s ease-in;
+      }
+    }
+  }
+
+  &_join {
+    align-self: center;
+    width: max-content;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 1.6rem 3rem;
+    text-decoration: none;
+    background-color: color.$blood-red;
+  }
+
+  @include media(small) {
+    background-size: 10%;
+    gap: 2.75rem;
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+
+    &_heading {
+      font-size: 2.6rem;
+
+      &::after {
+        width: 4.6rem;
+      }
+    }
+
+    &_group {
+      gap: 1rem;
+
+      &--list {
+        padding: 1.6rem;
+        column-gap: 1.2rem;
+        align-items: center;
+        font-size: 1.25rem;
+
+        .icon {
+          font-size: 3rem;
+        }
+
+        .topic {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &_join {
+      font-size: 1.75rem;
+      padding: 1.6rem 3rem;
+    }
+  }
+
+  @include media(medium) {
+    background-size: 10%;
+    gap: 3rem;
+    padding-top: 4.6rem;
+    padding-bottom: 4.6rem;
+
+    &_heading {
+      font-size: 2.75rem;
+
+      &::after {
+        width: 4.6rem;
+      }
+    }
+
+    &_group {
+      gap: 1rem;
+
+      &--list {
+        padding: 1.6rem;
+        column-gap: 1.2rem;
+        align-items: center;
+        font-size: 1.3rem;
+
+        .icon {
+          font-size: 3.4rem;
+        }
+
+        .topic {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &_join {
+      font-size: 1.75rem;
+      padding: 1.6rem 3.25rem;
+    }
+  }
+
+  @include media(ipad) {
+    background-size: 10%;
+    gap: 3rem;
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+
+    &_heading {
+      font-size: 3rem;
+
+      &::after {
+        width: 5rem;
+      }
+    }
+
+    &_group {
+      gap: 1rem;
+
+      &--list {
+        padding: 1.6rem;
+        column-gap: 1.2rem;
+        align-items: center;
+        font-size: 1.7rem;
+
+        .icon {
+          font-size: 4.4rem;
+        }
+
+        .topic {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &_join {
+      font-size: 2rem;
+      padding: 2rem 4rem;
+    }
+  }
+
+  @include media(mini-tab) {
+    background-size: 6%;
+    gap: 6rem;
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+
+    &_heading {
+      font-size: 2.6rem;
+
+      &::after {
+        width: 4rem;
+      }
+    }
+
+    &_group {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+
+      &--list {
+        grid-template-columns: 1fr;
+        padding: 1.75rem;
+        gap: 1rem;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        text-align: center;
+        align-content: flex-start;
+
+        .icon {
+          font-size: 4rem;
+        }
+
+        .topic {
+          font-size: 2rem;
+        }
+      }
+
+      &--list:nth-child(4),
+      &--list:nth-child(5) {
+        margin-left: 50%;
+      }
+    }
+
+    &_join {
+      font-size: 1.75rem;
+      padding: 2rem 4rem;
+      background-color: transparent;
+      overflow: hidden;
+      position: relative;
+      visibility: hidden;
+
+      &::after {
+        content: 'See The Whole Program';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        color: inherit;
+        visibility: visible;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline gray;
+      }
+
+      &:hover {
+        font-weight: 900;
+        color: color.$tomato;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    background-size: 4%;
+    gap: 4rem;
+
+    &.padx {
+      padding-top: 5.75rem;
+      padding-bottom: 5.75rem;
+    }
+
+    &_heading {
+      font-size: 2.25rem;
+
+      &::after {
+        width: 3.6rem;
+      }
+    }
+
+    &_group {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.6rem;
+
+      &--list {
+        grid-template-columns: 1fr;
+        padding: 1.2rem;
+        gap: 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        align-content: flex-start;
+
+        .icon {
+          font-size: 3rem;
+        }
+
+        .topic {
+          font-size: 1.4rem;
+        }
+      }
+
+      &--list:nth-child(4),
+      &--list:nth-child(5) {
+        margin-left: 0;
+      }
+    }
+
+    &_join {
+      font-size: 1.25rem;
+      padding: 2rem 4rem;
+      background-color: transparent;
+      overflow: hidden;
+      position: relative;
+      visibility: hidden;
+
+      &::after {
+        content: 'See The Whole Program';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        color: inherit;
+        visibility: visible;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline gray;
+      }
+    }
+  }
+
+  @include media(s-lap) {
+    background-size: 3%;
+    gap: 4rem;
+    margin: auto;
+
+    &.padx {
+      padding-top: 5.75rem;
+      padding-bottom: 5.75rem;
+    }
+
+    &_group {
+      gap: 0.75rem;
+
+      &--list {
+        padding: 1.6rem;
+        gap: 0.6rem;
+        font-size: 1.45rem;
+        line-height: 1.5;
+
+        .icon {
+          font-size: 4rem;
+        }
+
+        .topic {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &_join {
+      font-size: 1.25rem;
+      padding: 2rem 4rem;
+    }
+  }
+}

@@ -1,0 +1,583 @@
+@use '../../../utils/fonts' as font;
+@use '../../../utils/colors' as color;
+@use '../../../common';
+@use '../../../breakpoints/mixins' as *;
+
+%display-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-info {
+  @extend %info;
+
+  text-align: center;
+  gap: 3.6rem;
+  padding-top: 8rem;
+  background-position: bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, left 7% top 32%;
+
+  .welcome {
+    .banner {
+      font-family: font.$lato;
+    }
+
+    .year {
+      font-size: 2rem;
+    }
+  }
+
+  .summary {
+    &-break {
+      display: block;
+    }
+  }
+
+  .dates {
+    font-weight: 400;
+    font-size: 1rem;
+
+    .venue {
+      display: block;
+      padding-top: 0.75rem;
+    }
+
+    .contact {
+      &-mail {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+          color: crimson;
+        }
+      }
+    }
+  }
+
+  @include media(small) {
+    gap: 4rem;
+    padding-top: 8.4rem;
+    padding-bottom: 9.4rem;
+    background-position: bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, left 7% top 26%;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2rem;
+
+      .banner {
+        font-size: 2.35rem;
+        line-height: 1.25;
+        padding-left: 4px;
+        background-size: 100% 50rem;
+      }
+
+      .year {
+        font-size: 2.75rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .dates {
+      font-size: 1.2rem;
+      letter-spacing: 0.25px;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  @include media(medium) {
+    gap: 4rem;
+    padding-top: 9.4rem;
+    padding-bottom: 10.4rem;
+    background-position: bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, left 7% top 30%;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2.25rem;
+
+      .banner {
+        font-size: 2.75rem;
+        line-height: 1.25;
+        padding-left: 4px;
+        background-size: 100% 50rem;
+      }
+
+      .year {
+        font-size: 3rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .dates {
+      font-size: 1.32rem;
+      letter-spacing: 0.25px;
+      line-height: 1.6;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @include media(ipad) {
+    gap: 4rem;
+    padding-top: 11.4rem;
+    padding-bottom: 12.4rem;
+    background-position: bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, left 7% top 31%;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2.75rem;
+
+      .banner {
+        font-size: 3.25rem;
+        line-height: 1.25;
+        background-size: 100% 70rem;
+      }
+
+      .year {
+        font-size: 4rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .dates {
+      font-size: 1.6rem;
+      letter-spacing: 0.25px;
+      line-height: 1.6;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    gap: 4rem;
+
+    &.padx {
+      padding-top: 9rem;
+      padding-bottom: 9rem;
+    }
+
+    background-position: top 25% right 10%, bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, left 5% top 34%;
+    background-size: 25%, 8%, 10%, 10%, 10%, cover;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2.75rem;
+
+      .banner {
+        font-size: 3.75rem;
+        line-height: 1.25;
+        background-size: 100% 70rem;
+      }
+
+      .year {
+        font-size: 4rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.3em;
+      font-weight: 600;
+      line-height: 2;
+
+      &-break {
+        display: block;
+      }
+    }
+
+    .dates {
+      font-size: 1.8rem;
+      letter-spacing: 0.25px;
+      line-height: 1.6;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @include media(xs-lap) {
+    gap: 2rem;
+
+    &.padx {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+
+    background-position: top 25% right 10%, bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, left 5% top 34%;
+    background-size: 15%, 8%, 10%, 10%, 10%, cover;
+
+    .welcome {
+      gap: 1.6rem;
+      font-size: 2.75rem;
+
+      .banner {
+        font-size: 3.75rem;
+        line-height: 1.25;
+        background-size: 100% 70rem;
+      }
+
+      .year {
+        font-size: 4rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .summary {
+      padding: 1.6rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 2;
+
+      &-break {
+        display: block;
+      }
+    }
+
+    .dates {
+      font-size: 1.6rem;
+      letter-spacing: 0.25px;
+      line-height: 1.6;
+
+      .venue {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.about-highlight {
+  @extend %display-flex;
+
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: font.$lato;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: thin solid transparentize($color: color.$blue-black, $amount: 0.75);
+
+  .heading {
+    align-self: center;
+    text-align: center;
+    color: color.$blue-black;
+    text-transform: capitalize;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 1.25rem;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 4rem;
+      height: 1px;
+      background-color: color.$tomato;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .foundation {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.4;
+    color: color.$blue-black;
+  }
+
+  .foundation-logo {
+    display: inline-block;
+    border: thin solid transparentize($color: color.$blue-black, $amount: 0.75);
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  @include media(medium) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    .heading {
+      font-size: 2.6rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 3rem;
+      line-height: 1.4;
+
+      &::after {
+        width: 4rem;
+        height: 1px;
+      }
+    }
+
+    .foundation {
+      font-size: 1.35rem;
+      line-height: 1.4;
+    }
+
+    .foundation-logo {
+      border: thin solid transparentize($color: color.$blue-black, $amount: 0.75);
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+    }
+  }
+
+  @include media(ipad) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    .heading {
+      font-size: 3.4rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 3rem;
+      line-height: 1.4;
+
+      &::after {
+        width: 4rem;
+        height: 1px;
+      }
+    }
+
+    .foundation {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .foundation-logo {
+      border: thin solid transparentize($color: color.$blue-black, $amount: 0.75);
+      padding: 1rem 2rem;
+      margin-top: 5rem;
+    }
+  }
+
+  @include media(tablet) {
+    &.padx {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+
+    .heading {
+      font-size: 3rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 3rem;
+      line-height: 1.4;
+
+      &::after {
+        width: 4rem;
+        height: 1px;
+      }
+    }
+
+    .foundation {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .foundation-logo {
+      max-width: 35rem;
+      border: thin solid transparentize($color: color.$blue-black, $amount: 0.75);
+      padding: 1rem 2rem;
+      margin-top: 5rem;
+    }
+  }
+}
+
+.past-highlight {
+  @extend .about-highlight;
+
+  background-color: color.$lighter-gray;
+  border: none;
+
+  &_wrapper {
+    @extend %display-flex;
+
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .wrapper_list {
+      @extend %display-flex;
+
+      justify-content: center;
+      // align-items: center;
+      position: relative;
+      width: 100%;
+      font-family: font.$lato;
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: darken;
+        background-color: transparentize($color: rgba(255, 0, 25, 1), $amount: 0.2);
+      }
+
+      .list-link {
+        &_img {
+          width: 100%;
+          height: 22rem;
+          display: inline-block;
+        }
+      }
+
+      .event-year {
+        position: absolute;
+        text-align: center;
+        align-self: center;
+        color: color.$lighter-gray;
+        font-size: 3.25rem;
+        line-height: 1.9;
+        font-weight: 900;
+        z-index: 1;
+
+        .place {
+          font-size: 1.25rem;
+          font-weight: 600;
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include media(medium) {
+    &_wrapper {
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .wrapper_list {
+        .list-link {
+          font-size: 1.75rem;
+
+          &_img {
+            height: 25rem;
+          }
+        }
+
+        .event-year {
+          font-size: 3.75rem;
+          line-height: 1.9;
+
+          .place {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(ipad) {
+    &_wrapper {
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .wrapper_list {
+        .list-link {
+          font-size: 1.75rem;
+
+          &_img {
+            height: 30rem;
+          }
+        }
+
+        .event-year {
+          font-size: 4rem;
+          line-height: 1.9;
+
+          .place {
+            font-size: 1.375rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &_wrapper {
+      gap: 2rem;
+      margin-top: 5rem;
+      flex-direction: row;
+
+      .wrapper_list {
+        .list-link {
+          font-size: 1.75rem;
+
+          &_img {
+            max-height: 20rem;
+          }
+        }
+
+        .event-year {
+          font-size: 4rem;
+          line-height: 1.9;
+
+          .place {
+            font-size: 1.375rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(s-lap) {
+    &_wrapper {
+      gap: 2rem;
+      margin-top: 5rem;
+      flex-direction: row;
+
+      .wrapper_list {
+        .list-link {
+          font-size: 1.75rem;
+
+          &_img {
+            max-height: 25rem;
+          }
+        }
+
+        .event-year {
+          font-size: 4rem;
+          line-height: 1.9;
+
+          .place {
+            font-size: 1.375rem;
+          }
+        }
+      }
+    }
+  }
+}
