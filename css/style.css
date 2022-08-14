@@ -1376,7 +1376,7 @@ ul {
   width: 100%;
   height: 100%;
   mix-blend-mode: darken;
-  background-color: rgba(255, 0, 25, 0.8);
+  background-color: rgba(187, 141, 255, 0.8);
 }
 
 .featured-speaker_group--list:hover .contact-info {
