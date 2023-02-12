@@ -22,7 +22,7 @@ a {
   text-decoration: none;
 }
 
-a:focus {
+a:focus-visible {
   outline: 4px solid rgb(191, 0, 255);
 }
 
