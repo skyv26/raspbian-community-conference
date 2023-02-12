@@ -15,10 +15,15 @@ body {
   position: relative;
 }
 
+a:focus {
+  outline: 4px solid rgb(191, 0, 255);
+}
+
 .padx {
   padding: 1.1rem 1.75rem;
   width: 100%;
 }
+
 @media (min-width: 48em) {
   .padx.padx {
     padding: 1.1rem 5.25rem;
