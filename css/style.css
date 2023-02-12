@@ -472,7 +472,7 @@ ul {
   gap: 1.6rem;
   padding-top: 7.4rem;
   padding-bottom: 8.4rem;
-  background-image: url("../../../../assets/patt.svg"), url("../../../../assets/arduino.svg"), url("../../../../assets/checkbox-feature.svg"), url("../../../../assets/Ellipse.svg"), url("../../../../assets/background.webp");
+  background-image: url("../../assets/patt.svg"), url("../../assets/arduino.svg"), url("../../assets/checkbox-feature.svg"), url("../../assets/Ellipse.svg"), url("../../assets/background.webp");
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: 12%, 15%, 15%, 20%, cover;
   background-position: bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, right 7% top 45%;
@@ -492,7 +492,7 @@ ul {
   letter-spacing: 1px;
   line-height: 1.15;
   padding-left: 3.5px;
-  background-image: url("../../../../assets/118.webp");
+  background-image: url("../assets/118.webp");
   background-repeat: no-repeat;
   background-size: 100% 50rem;
   background-clip: text;
@@ -532,7 +532,7 @@ ul {
 }
 @media (min-width: 48em) {
   .about-info, .event-info {
-    background-image: url("../../../../assets/rpi_vector.svg"), url("../../../../assets/patt.svg"), url("../../../../assets/arduino.svg"), url("../../../../assets/checkbox-feature.svg"), url("../../../../assets/Ellipse.svg"), url("../../../../assets/desktop-bg.webp");
+    background-image: url("../assets/rpi_vector.svg"), url("../assets/patt.svg"), url("../assets/arduino.svg"), url("../assets/checkbox-feature.svg"), url("../assets/Ellipse.svg"), url("../assets/desktop-bg.webp");
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: 40%, 12%, 15%, 15%, 20%, cover;
     background-position: top 0 left 0, bottom 3% left 7%, bottom 5% right 7%, right 30% top 5%, right 7% top 45%;
@@ -747,7 +747,7 @@ ul {
 
 .program-highlight {
   background-color: rgb(39, 42, 50);
-  background-image: url("../../../../assets/pattern_bg.png");
+  background-image: url("../assets/pattern_bg.png");
   background-size: 12%;
   font-family: "Lato", sans-serif;
   gap: 2.6rem;
@@ -1111,7 +1111,7 @@ ul {
   grid-template-columns: 1fr 2fr;
   padding: 1.4rem 0 0 1.4rem;
   background-color: transparent;
-  background-image: url("../../../../assets/mobile-check.svg");
+  background-image: url("../assets/mobile-check.svg");
   background-repeat: no-repeat;
   column-gap: 0.25rem;
   justify-content: safe;
@@ -1389,7 +1389,7 @@ ul {
     height: auto;
   }
   .featured-speaker_group--list {
-    background-image: url("../../../../assets/gray-mobile-check.svg");
+    background-image: url("../assets/gray-mobile-check.svg");
     padding: 1.4rem 0 0 1.4rem;
     column-gap: 1.6rem;
   }
@@ -1445,7 +1445,7 @@ ul {
     height: auto;
   }
   .featured-speaker_group--list {
-    background-image: url("../../../../assets/gray-mobile-check.svg");
+    background-image: url("../assets/gray-mobile-check.svg");
     padding: 1.4rem 0 0 1.4rem;
     column-gap: 1.25rem;
     cursor: pointer;
@@ -1475,7 +1475,7 @@ ul {
     height: auto;
   }
   .featured-speaker_group--list {
-    background-image: url("../../../../assets/desktop-check.svg");
+    background-image: url("../assets/desktop-check.svg");
     padding: 1.8rem 0 0 1.8rem;
     column-gap: 1rem;
     cursor: pointer;
