@@ -1,7 +1,7 @@
 
 # Project Name
 
-> **Raspbian community conference is the platform where electronic hobbyist and embedded developer people from all around the world comes to share the knowledge, also the raspbian foundation members announces the new updates, news upon Raspberry Pi boards. As Raspberry Pi are the mini computers which almost do any work at very cheap price as compared to the system/laptop that we have. In upcoming years we will see a great change in the world because now we are in the initial state of era of Internet of Things.**
+> **The Raspbian Community Conference is a brand-new event led by the Raspberry Pi Foundation with lots of help from our community of young people, educators, hobbyists, and tech enthusiasts. It will be a chance for people of all ages and skill levels to have a go at getting creative with tech, as well as a celebration of all that our digital makers have already learnt and achieved, whether through taking part in Code Clubs, CoderDojos, or Raspberry Jams or through trying our resources at home.**
 
 
 ## Built With
